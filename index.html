@@ -16,13 +16,15 @@
     }
     .bg-button{
         background: #FF4240;
+
     }
+    
 </style>
 </head>
 <body>
     <header>
         <nav>
-            <div class="navbar bg-base-100 font-manrope pt-12">
+            <div class="navbar bg-base-100 font-manrope lg:pt-8 lg:px-32">
                 <div class="navbar-start">
                   <div class="dropdown">
                     <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -46,13 +48,45 @@
                       <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
                     </button>
                 
-                <div class="navbar-end lg:pl-6">
+                <div class=" pl-6">
                     
                   <button class="bg-button rounded lg:rounded-lg w-24 lg:w-32 h-10 lg:h-12 text-white font-bold">Get Ticket</button>
                 
                 </div>
               </div>
         </nav>
+        <div class="carousel pt-12 lg:px-32 w-full  rounded-2xl ">
+            <div id="slide1" class="carousel-item relative w-full lg:px-32">
+              <img src="Images/1.png" class="w-full" />
+              <div class=" lg:absolute p-5 rounded-2xl lg:top-[550px] lg:end-[165px]  text-white w-80vw h-[150px] bg-[#131318]">
+                <h4 class="text-2xl font-extrabold pb-2">Meet all the heroes from the field</h4>
+                <p>Explore the glory of hockey at our stadium – meet the field's heroes,  legends, and champions firsthand in <br> this immersive experience.Ryan Mitchell,Jessica Thompson,Brandon Davis,Lauren Anderson,Tyler Miller. </p>
+              </div>
+              <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                <a href="#slide2" class="btn btn-circle">❮</a> 
+                <a href="#slide2" class="btn btn-circle">❯</a>
+              </div>
+            </div> 
+            <div id="slide2" class="carousel-item relative lg:px-32 w-full">
+              <img src="Images/1.png" class="w-full" />
+              <div class=" lg:absolute p-5 rounded-2xl  lg:top-[550px] lg:end-[165px]  text-white w-80vw h-[150px] bg-[#131318]">
+                <h4 class="text-2xl font-extrabold pb-2">Meet all the heroes from the field</h4>
+                <p>Explore the glory of hockey at our stadium – meet the field's heroes,  legends, and champions firsthand in <br> this immersive experience.Ryan Mitchell,Jessica Thompson,Brandon Davis,Lauren Anderson,Tyler Miller.</p>
+              </div>
+              <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                <a href="#slide1" class="btn btn-circle">❮</a> 
+                <a href="#slide1" class="btn btn-circle">❯</a>
+              </div>
+            </div> 
+            
+           
+           
+          </div>
+          <div class=" lg:hidden mt-4 p-1 rounded-2xl  lg:top-[550px] lg:end-[165px]  text-white w-80vw h-[150px] bg-[#131318]">
+            <h4 class="text-lg font-extrabold pb-2">Meet all the heroes from the field</h4>
+            <p class="text-xs ">Explore the glory of hockey at our stadium – meet the field's heroes,  legends, and champions firsthand in <br> this immersive experience.Ryan Mitchell,Jessica Thompson,Brandon Davis,Lauren Anderson,Tyler Miller.</p>
+          </div>
+          
     </header>
     <main>
 
