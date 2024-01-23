@@ -1,98 +1,286 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assignment-3</title>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
-<script src="https://cdn.tailwindcss.com"></script>
-<!-- Google Font Manrope -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<style>
-    .font-manrope{
-        font-family: 'Manrope', sans-serif;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment-3</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Font Manrope -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    .font-manrope {
+      font-family: 'Manrope', sans-serif;
     }
-    .bg-button{
-        background: #FF4240;
+
+    .bg-button {
+      background: #FF4240;
 
     }
-    
-</style>
+    .progress-ring__circle {
+  stroke-dasharray: 251.327, 251.327;
+  transition: stroke-dashoffset 0.35s;
+  transform: rotate(90deg);
+  transform-origin: 50% 50%;
+}
+  </style>
 </head>
+
 <body>
-    <header>
-        <nav>
-            <div class="navbar bg-base-100 font-manrope lg:pt-8 lg:px-32">
-                <div class="navbar-start">
-                  <div class="dropdown">
-                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
-                    </div>
-                 
-                  </div>
-                  <a class="btn btn-ghost text-4xl font-extrabold">Hockey<span class="text-[#FF4240]">’</span>s</a>
-                </div>
-                <div class="navbar-center hidden lg:flex">
-                  <ul class="menu menu-horizontal  px-1">
-                    <li class="text-[#FF4240] font-bold text-base"><a href="">Home</a></li>
-                   <li class="text-[#424247] font-normal text-base"><a href="">About</a></li>
-                    <li class="text-[#424247] font-normal text-base"><a>Pages</a></li>
-                    <li class="text-[#424247] font-normal text-base"><a href="">Blog</a></li>
-                    <li class="text-[#424247] font-normal text-base"><a href="">Contact</a></li>
-                  </ul>
-                </div>
-                <div class="navbar-end ">
-                    <button class="btn btn-ghost btn-circle hidden lg:flex">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
-                    </button>
-                
-                <div class=" pl-6">
-                    
-                  <button class="bg-button rounded lg:rounded-lg w-24 lg:w-32 h-10 lg:h-12 text-white font-bold">Get Ticket</button>
-                
-                </div>
-              </div>
-        </nav>
-        <div class="carousel pt-12 lg:px-32 w-full  rounded-2xl ">
-            <div id="slide1" class="carousel-item relative w-full lg:px-32">
-              <img src="Images/1.png" class="w-full" />
-              <div class=" lg:absolute p-5 rounded-2xl lg:top-[550px] lg:end-[165px]  text-white w-80vw h-[150px] bg-[#131318]">
-                <h4 class="text-2xl font-extrabold pb-2">Meet all the heroes from the field</h4>
-                <p>Explore the glory of hockey at our stadium – meet the field's heroes,  legends, and champions firsthand in <br> this immersive experience.Ryan Mitchell,Jessica Thompson,Brandon Davis,Lauren Anderson,Tyler Miller. </p>
-              </div>
-              <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                <a href="#slide2" class="btn btn-circle">❮</a> 
-                <a href="#slide2" class="btn btn-circle">❯</a>
-              </div>
-            </div> 
-            <div id="slide2" class="carousel-item relative lg:px-32 w-full">
-              <img src="Images/1.png" class="w-full" />
-              <div class=" lg:absolute p-5 rounded-2xl  lg:top-[550px] lg:end-[165px]  text-white w-80vw h-[150px] bg-[#131318]">
-                <h4 class="text-2xl font-extrabold pb-2">Meet all the heroes from the field</h4>
-                <p>Explore the glory of hockey at our stadium – meet the field's heroes,  legends, and champions firsthand in <br> this immersive experience.Ryan Mitchell,Jessica Thompson,Brandon Davis,Lauren Anderson,Tyler Miller.</p>
-              </div>
-              <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                <a href="#slide1" class="btn btn-circle">❮</a> 
-                <a href="#slide1" class="btn btn-circle">❯</a>
-              </div>
-            </div> 
-            
-           
-           
+  <header>
+    <nav>
+      <div class="navbar bg-base-100 font-manrope lg:pt-8 lg:px-32">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+              </svg>
+            </div>
+
           </div>
-          <div class=" lg:hidden mt-4 p-1 rounded-2xl  lg:top-[550px] lg:end-[165px]  text-white w-80vw h-[150px] bg-[#131318]">
-            <h4 class="text-lg font-extrabold pb-2">Meet all the heroes from the field</h4>
-            <p class="text-xs ">Explore the glory of hockey at our stadium – meet the field's heroes,  legends, and champions firsthand in <br> this immersive experience.Ryan Mitchell,Jessica Thompson,Brandon Davis,Lauren Anderson,Tyler Miller.</p>
+          <a class="btn btn-ghost text-4xl font-extrabold">Hockey<span class="text-[#FF4240]">’</span>s</a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal  px-1">
+            <li class="text-[#FF4240] font-bold text-base"><a href="">Home</a></li>
+            <li class="text-[#424247] font-normal text-base"><a href="">About</a></li>
+            <li class="text-[#424247] font-normal text-base"><a>Pages</a></li>
+            <li class="text-[#424247] font-normal text-base"><a href="">Blog</a></li>
+            <li class="text-[#424247] font-normal text-base"><a href="">Contact</a></li>
+          </ul>
+        </div>
+        <div class="navbar-end ">
+          <button class="btn btn-ghost btn-circle hidden lg:flex">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+          </button>
+
+          <div class=" pl-6">
+
+            <button class="bg-button rounded lg:rounded-lg w-24 lg:w-32 h-10 lg:h-12 text-white font-bold">Get
+              Ticket</button>
+
           </div>
+        </div>
+    </nav>
+    <div class="carousel pt-12 lg:px-32 w-full  rounded-2xl font-manrope ">
+      <div id="slide1" class="carousel-item relative w-full lg:px-32">
+        <img src="Images/1.png" class="w-full" />
+        <div
+          class=" lg:absolute p-5 rounded-2xl lg:top-[550px] lg:end-[165px]  text-white w-80vw h-[150px] bg-[#131318]">
+          <h4 class="text-2xl font-extrabold pb-2">Meet all the heroes from the field</h4>
+          <p>Explore the glory of hockey at our stadium – meet the field's heroes, legends, and champions firsthand in
+            <br> this immersive experience.Ryan Mitchell,Jessica Thompson,Brandon Davis,Lauren Anderson,Tyler Miller.
+          </p>
+        </div>
+        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+          <a href="#slide2" class="btn btn-circle">❮</a>
+          <a href="#slide2" class="btn btn-circle">❯</a>
+        </div>
+      </div>
+      <div id="slide2" class="carousel-item relative lg:px-32 w-full">
+        <img src="Images/1.png" class="w-full" />
+        <div
+          class=" lg:absolute p-5 rounded-2xl  lg:top-[550px] lg:end-[165px]  text-white w-80vw h-[150px] bg-[#131318]">
+          <h4 class="text-2xl font-extrabold pb-2">Meet all the heroes from the field</h4>
+          <p>Explore the glory of hockey at our stadium – meet the field's heroes, legends, and champions firsthand in
+            <br> this immersive experience.Ryan Mitchell,Jessica Thompson,Brandon Davis,Lauren Anderson,Tyler Miller.
+          </p>
+        </div>
+        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+          <a href="#slide1" class="btn btn-circle">❮</a>
+          <a href="#slide1" class="btn btn-circle">❯</a>
+        </div>
+      </div>
+
+
+
+    </div>
+    <div
+      class=" lg:hidden mt-4 p-1 rounded-2xl  lg:top-[550px] lg:end-[165px]  text-white w-80vw h-[150px] bg-[#131318]">
+      <h4 class="text-lg font-extrabold pb-2">Meet all the heroes from the field</h4>
+      <p class="text-xs ">Explore the glory of hockey at our stadium – meet the field's heroes, legends, and champions
+        firsthand in <br> this immersive experience.Ryan Mitchell,Jessica Thompson,Brandon Davis,Lauren Anderson,Tyler
+        Miller.</p>
+    </div>
+
+  </header>
+  <main class="mt-8">
+    <hr class="mx-32 ">
+    <section class="text-center my-12">
+
+      <h3 class="text-[#131318] text-4xl font-extrabold">Professional Hockeys Club</h3>
+      <p class="text-[#13131899] font-medium pt-6">Pinnacle of athleticism, professional hockey clubs unite talents,
+        ignite passion, and conquer the ice with excellence</p>
+
+    </section>
+    <hr class="mx-32">
+    <section class="flex flex-col justify-evenly align-center lg:flex-row mx-32 my-12 space-y-5 lg:space-x-5">
+
+      
+        <div class="flex flex-col justify-center items-center ">
+          <div class="relative w-40 h-40 align-center">
+            <svg class="w-full h-full" viewBox="0 0 100 100">
+              <!-- Background circle -->
+              <circle
+                class="text-gray-200 stroke-current"
+                stroke-width="10"
+                
+                cx="50"
+                cy="50"
+                r="40"
+                fill="transparent"
+              ></circle>
+              <!-- Progress circle -->
+              <circle
+                class="text-red-500  progress-ring__circle stroke-current"
+                stroke-width="10"
+                stroke-linecap="round"
+                cx="50"
+                cy="50"
+                r="40"
+                fill="transparent"
+                stroke-dasharray="251.327"
+                stroke-dashoffset="32.59751"
+              ></circle>
+              
+              <!-- Center text -->
+              <text x="50" y="50" font-family="manrope" font-size="12" text-anchor="middle" alignment-baseline="middle"class="font-extrabold">87%</text>
           
-    </header>
-    <main>
+            </svg>
+          </div>
+          <div class="text-center">
+          <h3 class="font-base font-semibold pt-3">Prayer Facility</h3>
+          <p class="pt-3 text-[#13131899] text-sm">Find Tranquility in Our Dedicated Facility</p>
+        </div>
+        </div>
+      
+        <div class="flex flex-col justify-center items-center ">
+          <div class="relative w-40 h-40 align-center">
+            <svg class="w-full h-full" viewBox="0 0 100 100">
+              <!-- Background circle -->
+              <circle
+                class="text-gray-200 stroke-current"
+                stroke-width="10"
+                
+                cx="50"
+                cy="50"
+                r="40"
+                fill="transparent"
+              ></circle>
+              <!-- Progress circle -->
+              <circle
+                class="text-[#49D293]  progress-ring__circle stroke-current"
+                stroke-width="10"
+                stroke-linecap="round"
+                cx="50"
+                cy="50"
+                r="40"
+                fill="transparent"
+                stroke-dasharray="251.327"
+                stroke-dashoffset="12.56635"
+              ></circle>
+              
+              <!-- Center text -->
+              <text x="50" y="50" font-family="manrope" font-size="12" text-anchor="middle" alignment-baseline="middle" class="font-extrabold">95%</text>
+          
+            </svg>
+          </div>
+          <div class="text-center">
+          <h3 class="font-base font-semibold pt-3">Experienced Coach</h3>
+          <p class="pt-3 text-sm text-[#13131899]">Thriving Under Accomplished Leadership</p>
+        </div>
+        </div>
 
-    </main>
-    <footer>
+        <div class="flex flex-col justify-center items-center ">
+          <div class="relative w-40 h-40 align-center">
+            <svg class="w-full h-full" viewBox="0 0 100 100">
+              <!-- Background circle -->
+              <circle
+                class="text-gray-200 stroke-current"
+                stroke-width="10"
+                
+                cx="50"
+                cy="50"
+                r="40"
+                fill="transparent"
+              ></circle>
+              <!-- Progress circle -->
+              <circle
+                class="text-[#ffb546]  progress-ring__circle stroke-current"
+                stroke-width="10"
+                stroke-linecap="round"
+                cx="50"
+                cy="50"
+                r="40"
+                fill="transparent"
+                stroke-dasharray="251.327"
+                stroke-dashoffset="25.1327"
+              ></circle>
+              
+              <!-- Center text -->
+              <text x="50" y="50" font-family="manrope" font-size="12" text-anchor="middle" class="font-extrabold" alignment-baseline="middle">90%</text>
+          
+            </svg>
+          </div>
+          <div class="text-center">
+          <h3 class="font-base font-semibold pt-3">Senior Player</h3>
+          <p class="pt-3 text-sm text-[#13131899]">Seasoned Veterans Leading Our Team</p>
+        </div>
+        </div>
 
-    </footer>
+        <div class="flex flex-col justify-center items-center ">
+          <div class="relative w-40 h-40 align-center">
+            <svg class="w-full h-full" viewBox="0 0 100 100">
+              <!-- Background circle -->
+              <circle
+                class="text-gray-200 stroke-current"
+                stroke-width="10"
+                
+                cx="50"
+                cy="50"
+                r="40"
+                fill="transparent"
+              ></circle>
+              <!-- Progress circle -->
+              <circle
+                class="text-[#4C8DF1]  progress-ring__circle stroke-current"
+                stroke-width="10"
+                stroke-linecap="round"
+                cx="50"
+                cy="50"
+                r="40"
+                fill="transparent"
+                stroke-dasharray="251.327"
+                stroke-dashoffset="50.2654"
+              ></circle>
+              
+              <!-- Center text -->
+              <text x="50" y="50" font-family="manrope" font-size="12" text-anchor="middle" class="font-extrabold" alignment-baseline="middle">80%</text>
+          
+            </svg>
+          </div>
+          <div class="text-center">
+          <h3 class="font-base font-semibold pt-3">Senior Player</h3>
+          <p class="pt-3 text-sm text-[#13131899]">Seasoned Veterans Leading Our Team</p>
+        </div>
+        </div>
+
+    </section>
+
+
+  </main>
+  <footer>
+
+  </footer>
 </body>
+
 </html>
